@@ -33,11 +33,24 @@
 
 # 2. Initial Solution
 
+def seperate_comma(num)
+	if num<1000
+		p num
+		return num
+	else
+		num=num.to_s.split("")
+		num.insert(-4,",")
+		num=num.join("")
+		p num
+		return num
+	end
+end
 
-
+seperate_comma(333)
 
 # 3. Refactored Solution
 
+#I know that this can probably be done with RegEx, but I don't fully understand how to do this yet.
 
 
 # 4. Reflection 
