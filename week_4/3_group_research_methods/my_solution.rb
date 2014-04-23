@@ -6,18 +6,19 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
 
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
-	puts "a" if source.include?(thing_to_find)
-  # Your code here!
+	source.map{ |i| i.to_s }.select{|i| i.include? (thing_to_find)}
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  # Your code here!
+  source.select{|k,v| v==thing_to_find}.keys
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
+# I used the select method, which returns all elements for which the given block returns true
+#I selected all the elements that included the thing_to_find
+#I had to modify the array because the integer type elements were causing an error.
+#I also had to call .keys on the final hash result because I did not want to include the values.
+
 
 # Person 2
 def my_array_modification_method(source, thing_to_modify)
@@ -79,4 +80,9 @@ p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "on
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-# 
+# This was somewhat challenging. I am also not sure whether my solution is the best,
+#because while I used the .select in both methods, I had to use other methods in
+#addition to this one. This leaves me wondering whether there is a simpler solution
+#that I have been unable to find so far.
+#It is still not always easy for me to find the best method to use in every situation,
+#but I feel like I am making progress.
