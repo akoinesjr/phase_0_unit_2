@@ -34,16 +34,17 @@
 # 2. Initial Solution
 
 def seperate_comma(num)
-	if num<1000
-		p num
-		return num
-	else
-		num=num.to_s.split("")
-		num.insert(-4,",")
-		num=num.join("")
-		p num
-		return num
-	end
+  if num < 1000
+    return num.to_s
+  elsif num < 1000000
+    num=num.to_s.split("")
+    num=num.insert(-4,",").join("").to_s
+    return num
+  else
+   	num=num.to_s.split("")
+    num=num.insert(-4,",").insert(-8,",").join("").to_s
+    return num
+  end
 end
 
 seperate_comma(333)
@@ -52,5 +53,10 @@ seperate_comma(333)
 
 #I know that this can probably be done with RegEx, but I don't fully understand how to do this yet.
 
+#This solution is failing the tests but I don't know why as it does return the integer
+#as a string with the correct number of commas in the correct location.
 
 # 4. Reflection 
+
+#My solution could definitely be improved upon as it will fail when dealing with Numbers
+#that are >= 10 million.
