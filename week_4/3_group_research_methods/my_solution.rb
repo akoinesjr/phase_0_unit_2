@@ -19,50 +19,54 @@ end
 #I had to modify the array because the integer type elements were causing an error.
 #I also had to call .keys on the final hash result because I did not want to include the values.
 
-
-# Person 2
+# Person 2 (Amelia Downs)
 def my_array_modification_method(source, thing_to_modify)
-  # Your code here!
+  len = source.length; # find the number of elements in the array
+  # for each element in the array see if it is a string
+  0.upto(len - 1) do |loc|
+   # if the element is NOT a string, add thing_to_modify to it
+   if source[loc].is_a?(String) === false
+   source[loc] += thing_to_modify
+   end
+  end
+  return source
 end
 
+  
 def my_hash_modification_method(source, thing_to_modify)
-  # Your code here!
-end
 
-# Identify and describe the ruby method you implemented. 
-# 
-#
-#
+source.each {|name, age| source[name] += thing_to_modify}
+
+return source
 
 
-# Person 3
+# Person 3 (Jeff Kynaston)
 def my_array_sorting_method(source)
-  # Your code here!
-end
+  sortedArray = source.sort_by { |a| a.to_s }
+  return sortedArray.uniq!
+ end
 
 def my_hash_sorting_method(source)
-  # Your code here!
+  sortedHash = source.sort_by { |name,age| age }
+  return sortedHash
 end
 
-# Identify and describe the ruby method you implemented. 
-# 
-#
-#
 
 
-# Person 4
+# Person 4 (Phillip Crawford, Jeuel Wilkerson)
+
+
 def my_array_deletion_method(source, thing_to_delete)
-  #Your code here!
+
+source = source.delete_if {|element| element.class == String && element.include?(thing_to_delete)
+}
 end
+
 
 def my_hash_deletion_method(source, thing_to_delete)
-  #Your code here!
+source.delete_if {|x, y| x == thing_to_delete }
 end
 
-# Identify and describe the ruby method you implemented. 
-# 
-#
-#
 
 
 ################## DRIVER CODE ###################################
