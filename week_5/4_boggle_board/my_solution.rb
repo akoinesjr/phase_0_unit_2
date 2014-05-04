@@ -87,3 +87,6 @@ puts get_col(1) == ["r", "o", "c", "a"]
 puts get_row(1) == ["i", "o", "d", "t"]
 
 # Reflection 
+
+#We were able to come up with a solution to the exercise relatively easily,
+#however I can't help but think that there is a more efficient way to do this.

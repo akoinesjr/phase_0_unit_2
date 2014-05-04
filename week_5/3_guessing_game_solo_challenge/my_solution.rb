@@ -81,3 +81,7 @@ newGuess.guess(12)==:high
 
 
 # 5. Reflection 
+
+#My solution to this exercise seems quite simple looking back on it, but
+#it took me a fair amount of time to reach it as I am still
+#getting used to working with classes and instance variables.
