@@ -110,6 +110,9 @@ puts card.check_card
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
+CreditCard.instance_method(:initialize).arity == 1
+CreditCard.new(4563960122001999).check_card==true
+CreditCard.new(4563960122001998).check_card==false
 
 
 
