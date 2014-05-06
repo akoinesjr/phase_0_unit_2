@@ -84,10 +84,29 @@ end
 
 # 4. Refactored Solution
 
+class CreditCard
+  def initialize(number)
+    @number = number.to_s.split("").map {|x| x.to_i}
+    raise ArgumentError, "Card number must be 16 digits long!" if @number.length != 16
+  end
 
+  def check_card
+    @number.each_index do |x|
+      @number[x] *= 2 if x % 2 == 0
+    end
+    @number=@number.join("").to_s.split("").map{|x| x.to_i}
+    sum=@number.inject{|sum,x| x.to_i+sum}
+    if sum % 10 == 0
+      return true
+    else
+      return false
+    end
+  end
 
+end
 
-
+card=CreditCard.new(4563960122001999)
+puts card.check_card
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
@@ -98,5 +117,7 @@ end
 
 # 5. Reflection 
 
-#This solution works but it is not a class, so it still needs to be refactored.
+#Initial solution worked but did not create a class. The refactored solution accomplishes this.
+#Also, initially I was created a second array for the solution, but this was unnecessary,
+#so I removed it to DRY out the code.
 
