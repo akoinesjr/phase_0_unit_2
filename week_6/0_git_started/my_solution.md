@@ -3,43 +3,41 @@ Define the following commands and describe how they work/what they do.
 
 
 #### add
-<!-- Your defnition here -->
+Begin tracking changes to a file
 
 #### branch
-<!-- Your defnition here -->
+Creates a separate version of the repository
 
 #### checkout
-<!-- Your defnition here -->
+Move to another repository
 
 #### clone
-<!-- Your defnition here -->
+Copies a repository into a new directory
 
 #### commit
-<!-- Your defnition here -->
+Save any changes that have been made in the repository
 
 #### fetch
-<!-- Your defnition here -->
+Updates the local copy of the remote repository
 
 #### log
-<!-- Your defnition here -->
+Shows the commit logs
 
 #### merge
-<!-- Your defnition here -->
+Add changes to master branch
 
 #### pull
-<!-- Your defnition here -->
+Downloads a copy of the repository
 
 #### push
-<!-- Your defnition here -->
+Uploads your copy of the repository
 
 #### reset
-<!-- Your defnition here -->
 
 #### rm
-<!-- Your defnition here -->
 
 #### status
-
+Displays whether there are any changes in the files in the current repository that are yet to be committed.
 
 ## Release 4: Git Workflow
 
@@ -48,3 +46,5 @@ Define the following commands and describe how they work/what they do.
 - Commit locally
 
 ## Release 5: Reflection
+
+#This exercise was helpful for me as up until now I'd been largely relying on the GitHub app.

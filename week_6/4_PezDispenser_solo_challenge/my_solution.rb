@@ -16,17 +16,64 @@
 
 # 2. Pseudocode
 
+=begin
 
+DEF class PezDispenser
+
+	DEF initialize
+	END
+
+	DEF create_dispenser function that takes an array, flavors, as an argument
+	END
+
+	DEF add_pez function
+	END
+
+	DEF pez_count function 
+		counts pez remaining
+	END
+
+	DEF get_pez function
+		Shows which pez was taken out
+		Calls pez_count
+	END
+
+	DEF see_all_pez function 
+		shows all pez in dispenser
+	END
+
+END
+	
+=end
 
 # 3. Initial Solution
 
 class PezDispenser
- 
-# your code here!
- 
+
+  def initialize(flavors)
+    @flavors=flavors
+  end
+
+  def add_pez(flavor)
+    @flavors<<flavor
+  end
+
+  def pez_count
+  	return @flavors.length
+  end
+
+  def get_pez
+  	puts "You receive a #{@flavors[-1]} pez!"
+  	@flavors.pop
+  end
+
+  def see_all_pez
+  	return @flavors
+  end
+
 end
  
-
+papa_smurf=PezDispenser.new(['strawberry','banana','orange'])
 
 # 4. Refactored Solution
 
@@ -53,3 +100,7 @@ puts "Now you have #{super_mario.pez_count} pez!"
 
 
 # 5. Reflection 
+
+#This exercise really helped cement my understanding of how to create a class in Ruby.
+#I now have a better understanding of how to create a class that will allow objects of
+#that class to have certain attributes and behavior.
